@@ -1,0 +1,15 @@
+AgeMax	10
+BatchMode	0
+DNAFill	0
+DisplayPeriod	10
+DumpStart	100
+GeneCoding	0
+GeneLength	8
+Icon	QtGraphics/EvolifeIcon.png
+NumberOfGroups	5
+PopulationSize	200
+ResultDir	./___Results
+ScenarioName	GreenBeard
+StartFromFile	0
+TimeLimit	20000
+Title	Evolife

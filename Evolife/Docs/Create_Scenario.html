@@ -1,0 +1,98 @@
+<HTML><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"><HEAD>
+<link rel="stylesheet" type="text/css" href="Evolife.css" >
+<TITLE>JL Dessalles &#45; Evolife
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFEEAA"><div>
+<P>
+<!&#45;&#45;  _Link+http://www.telecom&#45;paristech.fr(_ImageLeft+90(http://www.telecom&#45;paristech.fr/fileadmin/maquette/images/logo&#45;haut&#45;droit.png)) _Link+http://www.telecom&#45;paristech.fr &nbsp;&nbsp;&nbsp;&nbsp;Telecom ParisTech  &#45;&#45;>
+<HR WIDTH="100%" ALIGN="LEFT">
+<P>
+<span style="font&#45;size:144%"><p align="center"><span style="font&#45;family:Comic Sans MS"><a href="http://evolife.dessalles.fr">Evolife</a></span></p></span>
+<p align="center"><a href="http://www.dessalles.fr" target="_blank">Jean&#45;Louis Dessalles</a></p>
+<HR WIDTH="100%" ALIGN="LEFT">
+<IMG SRC="Images/Courbes.jpg" ALIGN="RIGHT"  style="padding&#45;left: 15px">
+<ol ><li><a href="http://evolife.dessalles.fr/Description.html">Overall description</a></li>
+<li><a href="http://evolife.dessalles.fr/Execution.html">How to execute Evolife</a> (+ download)</li>
+<li><a href="http://evolife.dessalles.fr/Sources.html">Evolife source files</a></li>
+<li><a href="http://evolife.dessalles.fr/Classes.html">Evolife classes</a></li>
+<li><a href="http://evolife.dessalles.fr/Functions.html">Evolife functions</a></li>
+<li><a href="http://evolife.dessalles.fr/Working.html">How Evolife works</a></li>
+<li><a href="http://evolife.dessalles.fr/Create_Scenario.html">Create your own Evolife scenario</a></li>
+<li><a href="http://evolife.dessalles.fr/Components.html">Use Evolife&rsquo;s components separately (graphics, ecology, genetic algorithm)</a></li></ol>
+<P>
+<br>
+<HR WIDTH="100%" ALIGN="LEFT">
+<br>
+ 
+<h2><div id="H0">
+7. Create you own <span style="font&#45;family:Comic Sans MS">Evolife</span> scenario
+</div></h2>
+<br>
+<span style="font&#45;family:Comic Sans MS">Evolife</span> allows you to study an evolving population, either to implement a genetic algorithm or to perform some ecological study. If you do not need all of this, consider <a href="Components">section 8</a> about using only some of <span style="font&#45;family:Comic Sans MS">Evolife</span>&rsquo;s components.
+<P>
+<span style="font&#45;family:Comic Sans MS">Evolife</span> scenarios vary:
+<ol ><li>by parameters and values defined in the configuration file (<span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">xxx.evo</span>) that you load with <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">starter</span>.</li>
+<li>by different default functions implemented in <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Default_Scenario.py</span> (in <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Scenarii</span>) that you can redefine.</li></ol>
+<P>
+There are several possibilities to create your own scenario by rewriting functions from <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Default_Scenario.py</span>:
+<ul ><li>Customize an existing scenario by copying and modifying an existing scenario <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Scenarii/S_xxx.py</span>.</li>
+<li>Alternatively, customize <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Scenarii/CustomScenario.py</span>. The program imports everything it needs from <span style="font&#45;family:Comic Sans MS">Evolife</span>, and reads the configuration file <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">MyCustomScenario.evo</span>. <u><br>Choose this option only if you need to re&#45;implement</u> one of the classes: <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Individual, Group, Population, Observer</span>.</li></ul>
+<h3><div id="H1">
+Customizing a scenario
+</div></h3>
+You may look in <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Scenarii</span> for the scenario that is closest to what you wish to do. Let&rsquo;s mention:
+<ul ><li><span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">S_SumBits.py</span>:&nbsp;&nbsp;&nbsp;&nbsp;a simple genetic algorithm</li>
+<li><span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">S_Labyrinth.py</span>:&nbsp;&nbsp;&nbsp;&nbsp;a genetic algorithm with phenotype</li>
+<li><span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">S_Favourable.py</span>:&nbsp;&nbsp;&nbsp;&nbsp;a simple ecological simulation</li>
+<li><span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">S_Void.py</span>:&nbsp;&nbsp;&nbsp;&nbsp;a void scenario that you can customize</li></ul>
+<P>
+You may cut&#45;and&#45;paste and rewrite all functions inherited from <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Default_Scenario</span> (defined in <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Default_Scenario.py</span>). These include:
+<ol style="list&#45;style&#45;type:none"><li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">initialization(self)</span>: allows to define local variables</li>
+<li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">genemap(self)</span>:  initialises the genes on the gene map (see <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Genetic_map.py</span>)</li>
+<li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">phenemap(self)</span>:   defines a list of phenotypic character names (see <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Phenotype.py</span>)</li>
+<li>+ <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">season(self, year)</span>:   makes periodic actions like resetting parameters</li>
+<li>+ <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">behaviour(self, BestIndiv, AvgIndiv)</span>:   defines a behaviour to be displayed</li>
+<li>+ <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">life_game(self, members)</span>: defines a round of interactions &#8211; calls the five following functions<ul style="list&#45;style&#45;type:none"></li>
+<li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">start_game(self, members)</span>: group&#45;level initialization before starting interactions<ul style="list&#45;style&#45;type:none"></li>
+<li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">prepare(self, indiv)</span>: individual initialization before starting interactions</ul></li>
+<li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">interaction(self, Indiv, Partner)</span>: defines a single interaction<ul style="list&#45;style&#45;type:none"></li>
+<li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">partner(self, Indiv, members)</span>: select a partner among <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">members</span> that will interact with <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Indiv</span></ul></li>
+<li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">end_game(self, members)</span>: an occasion for a closing round after all interactions</li>
+<li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">evaluation(self, Indiv)</span>: defines how the score of an individual is computed</li>
+<li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">lives(self, members)</span>: converts scores into life points</ul></li>
+<li>+ <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">couples(self, members)</span>: returns a list of couples for procreation (individuals may appear in several couples!). Calls the following function):<ul style="list&#45;style&#45;type:none"></li>
+<li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">parenthood(self, RankedCandidates, Def_Nb_Children)</span>:&nbsp;&nbsp;&nbsp;&nbsp;Determines the number of children depending on rank</li>
+<li>&#8211; <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">parents(self, candidates)</span>:&nbsp;&nbsp;&nbsp;&nbsp;selects two parents from a list of candidates (candidate = <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">(indiv, NbOfPotentialChildren)</span>)</ul></li>
+<li>+ <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">new_agent(self, child, parents)</span>: initializes newborns</li>
+<li>+ <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">remove_agent(self, agent)</span>: action to be performed when an agent dies</li>
+<li>+ <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">update_positions(self, members, groupID)</span>:              assigns a position to agents</li>
+<li>* <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">default_view(self)</span>: says which windows should be open at start up</li>
+<li>* <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">legends(self)</span>: returns a string to be displayed at the bottom ot the Legend window.</li>
+<li>* <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">display_(self)</span>:   says which statistics are displayed each year</li>
+<li>* <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Field_grid(self)</span>:&nbsp;&nbsp;&nbsp;&nbsp;initial draw in the Field window</li>
+<li>* <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Trajectory_grid(self)</span>:&nbsp;&nbsp;&nbsp;&nbsp;initial draw in the Trajectory window</li>
+<li>* <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">wallpaper(self, Window)</span>:              if one wants to display different backgrounds in windows</li></ol>
+<P>
+Functions marked with &lsquo;&#8211;&rsquo; are called from within the scenario.
+<br>
+Functions marked with &lsquo;+&rsquo; are called from <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Group.py</span>.
+<br>
+Functions marked with &lsquo;*&rsquo; are called from <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Observer.py</span>.
+<P>
+You may then run the scenario by choosing MyScenario.evo from the Configuration Editor.
+<h3><div id="H2">
+To create a scenario from scratch
+</div></h3>
+<ol ><li>Suppose you want to run a simulation of beehive. Create a new file, e.g. <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">S_Beehive.py</span> (or any appropriate name starting with <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">S_</span>) in the directory <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Scenarii</span> by copying an existing scenario (pick the one that seems to resemble your own project most closely, e.g. <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">S_SexRatio.py</span>).</li>
+<li>Customize <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">S_Beehive.py</span> by rewriting any functions inherited from <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Default_Scenario</span>  (some have been listed in the preceding section).</li>
+<li>Create a <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Beehive.evo</span> configuration file at an appropriate location (typically in the <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Expe</span> directory). This file should include many of the parameter&#45;value pairs that <span style="font&#45;family:Comic Sans MS">Evolife</span> is looking for, such as <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">PopulationSize</span> or <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">MutationRate</span>.</li>
+<li>You can edit the new parameter&#45;value pairs you introduced in the <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">.evo</span> configuration file using the confituration editor (<span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">starter</span>). Your parameters will be merely added at the bottom after you have loaded <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Beehive.evo</span>. If you want a cleaner aspect, you should edit the appropriate  <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">.xml</span> file loaded by <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">starter</span>. Then restart the Configuration Editor by executing <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">./starter</span>.  After setting all relevant parameters to the desired values, you can run <span style="font&#45;family:Comic Sans MS">Evolife</span> with your scenario by clicking on <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">[Run]</span>.</li></ol>
+<br>
+If you REALLY need to re&#45;implement classes such as <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Individual</span>, <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Group</span>, <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Population</span> or <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">Observer</span>, do the same by rewriting <span style="font&#45;family:&#39;Fira Mono&#39;,Courier;font&#45;size&#45;adjust: 0.50">CustomScenario</span>.
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<P>
+<HR WIDTH="100%" ALIGN="LEFT">
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;</div></BODY></HTML>

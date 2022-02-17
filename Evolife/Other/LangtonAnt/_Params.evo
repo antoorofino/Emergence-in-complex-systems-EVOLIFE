@@ -1,0 +1,13 @@
+ParamName	ParamValue
+ApplicationDir	.
+DisplayPeriod	100
+Icon	icon.png
+Noise	2000
+Rule	LR
+RunConfigFile	_Params.evo
+ScenarioFileName	LangtonAnt.evo
+ScenarioName	LangtonAnt
+Size	100
+Target	LangtonAnt.py
+TimeLimit	10000
+Title	Evolife_Langton_Ant

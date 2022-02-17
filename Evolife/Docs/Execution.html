@@ -1,0 +1,138 @@
+<HTML><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"><HEAD>
+<link rel="stylesheet" type="text/css" href="Evolife.css" >
+<TITLE>JL Dessalles &#45; Evolife
+</TITLE>
+
+</HEAD>
+<BODY BGCOLOR="#FFEEAA"><div>
+
+<P>
+<!&#45;&#45;  _Link+http://www.telecom&#45;paristech.fr(_ImageLeft+90(http://www.telecom&#45;paristech.fr/fileadmin/maquette/images/logo&#45;haut&#45;droit.png)) _Link+http://www.telecom&#45;paristech.fr &nbsp;&nbsp;&nbsp;&nbsp;Telecom ParisTech  &#45;&#45;>
+<HR WIDTH="100%" ALIGN="LEFT">
+<P>
+<span style="font&#45;size:144%"><p align="center"><span style="font&#45;family:Comic Sans MS"><a href="http://evolife.dessalles.fr">Evolife</a></span></p></span>
+<p align="center"><a href="http://www.dessalles.fr">Jean&#45;Louis Dessalles</a></p>
+<HR WIDTH="100%" ALIGN="LEFT">
+<IMG SRC="Images/Courbes.jpg" ALIGN="RIGHT"  style="padding&#45;left: 15px">
+<ol ><li><a href="http://evolife.dessalles.fr/Description.html">Overall description</a></li>
+<li><a href="http://evolife.dessalles.fr/Execution.html">How to execute Evolife</a> (+ download)</li>
+<li><a href="http://evolife.dessalles.fr/Sources.html">Evolife source files</a></li>
+<li><a href="http://evolife.dessalles.fr/Classes.html">Evolife classes</a></li>
+<li><a href="http://evolife.dessalles.fr/Functions.html">Evolife functions</a></li>
+<li><a href="http://evolife.dessalles.fr/Working.html">How Evolife works</a></li>
+<li><a href="http://evolife.dessalles.fr/Create_Scenario.html">Create your own Evolife scenario</a></li>
+<li><a href="http://evolife.dessalles.fr/Components.html">Use Evolife&rsquo;s components separately (graphics, ecology, genetic algorithm)</a></li></ol>
+<P>
+<br>
+<HR WIDTH="100%" ALIGN="LEFT">
+<br>
+ 
+<h2><div id="H0">
+2. How to execute <span style="font&#45;family:Comic Sans MS">Evolife</span>
+</div></h2>
+<h3><div id="H1">
+Installation
+</div></h3>
+The latest version of <span style="font&#45;family:Comic Sans MS">Evolife</span> can be downloaded from: <span style="font&#45;size:144%"><a href="Evolife.zip">Evolife.zip</a></span>
+<br>
+<!&#45;&#45;  _small((older versions: _l0+Evolife&#45;2014&#45;4.zip(Evolife&#45;2014&#45;11.zip) _l0+Evolife&#45;2014&#45;4.zip(Evolife&#45;2014&#45;4.zip) ))  &#45;&#45;>
+<ul ><li>You may extract the <span style="font&#45;family:Comic Sans MS">Evolife</span> directory into an appropriate location.</li>
+<li>If you don&rsquo;t know how to extract files from the archive (normally, you do it by merely clicking on it), you may copy&#45;paste the following lines into a terminal window at the appropriate location:<br><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">python</span><br><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">import zipfile, sys</span><br> <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">zipfile.ZipFile(&#39;Evolife.zip&#39;).extractall()</span><br><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">exit()</span><br><br></li></ul>
+<P>
+<span style="font&#45;family:Comic Sans MS">Evolife</span> is written in Python (<a href="http://www.python.org/">http://www.python.org/</a>) and should therefore run on various platforms. You should install Python first. The current version of <span style="font&#45;family:Comic Sans MS">Evolife</span> should run without too much trouble with old versions of Python (Python 2.6 or 2.7). It is however designed to run with <b>Python 3</b> (tested up to Python 3.6) (please report any problem you may notice).
+<P>
+<span style="font&#45;family:Comic Sans MS">Evolife</span>&rsquo;s graphics requires the <b>PyQT library</b>.
+It is compatible with <a href="http://www.riverbankcomputing.co.uk/software/pyqt/download">PyQT4</a> and with <a href="https://www.riverbankcomputing.com/software/pyqt/download5">PyQt5</a>.
+<P>
+<b>Summary</b>
+<ul ><li>Install <a href="https://www.python.org/downloads/release/python&#45;361/">Python</a></li>
+<li>Install <a href="https://www.riverbankcomputing.com/software/pyqt/download5">PyQt</a></li>
+<li>Download <span style="font&#45;family:Comic Sans MS"><a href="Evolife.zip">Evolife</a></span> and install it by unzipping it in an appropriate location.</li></ul>
+<!&#45;&#45;  _small &nbsp;&nbsp;&nbsp;&nbsp;Optional, but useful: library _l+http://psyco.sourceforge.net/(psyco), once installed, makes _f+Comic Sans MS(Evolife) run three time faster on certain versions of Python. For python 2.6, you get psyco from _l+http://www.voidspace.org.uk/python/modules.shtml#psyco(there). Psyco does not seem to be available for higher versions of python.  &#45;&#45;>
+<h3><div id="H2">
+Execution
+</div></h3>
+<ul ><li>On <u>MsWindows</u>: <ul></li>
+<li>Run <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Starter.bat</span> from <span style="font&#45;family:Comic Sans MS">Evolife</span>&rsquo;s directory.</ul></li>
+<li>On <u>Unix or Linux</u>: <ul></li>
+<li><span style="color:red"><b>The first time, execute the command: <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">python first.py</span> from <span style="font&#45;family:Comic Sans MS">Evolife</span>&rsquo;s folder.</b></span></li>
+<li>Then, <span style="font&#45;family:Comic Sans MS">Evolife</span> is launched by executing the command <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">./starter</span> from <span style="font&#45;family:Comic Sans MS">Evolife</span>&rsquo;s directory.</ul></li></ul>
+<P>
+<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Starter</span> shows a configuration editor that allows you to choose a scenario and to modify parameters, before running <span style="font&#45;family:Comic Sans MS">Evolife</span> by clicking the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[Run]</span> button.
+<br>
+<p align="center"><IMG SRC="Images/TreeExplore.jpg" ></p>
+<p align="center">
+<i>The <span style="font&#45;family:Comic Sans MS">Evolife</span> Configuration Editor</i>
+</p>
+<P>
+The configuration editor provides a short description of each parameter at the bottom of the window.
+<br>
+The <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[Load]</span> button loads an existing scenario. You may modify any parameter value. It is recommended to start from an existing scenario when creating a new one. If you need to add new parameters or modify the names of existing ones, simply edit the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">EvolifeConfigTree.xml</span> file before executing <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Stater.bat</span>.
+<br>
+The <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[Run]</span> button executes <span style="font&#45;family:Comic Sans MS">Evolife</span>. To do so, parameter values are stored in <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Evolife.evo</span>, and <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Main.py</span> is executed (or any program specified as <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Target</span> in the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Run Settings</span> section of <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Starter</span>). If you execute <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Main.py</span> directly (sometimes useful to display an error when you customize <span style="font&#45;family:Comic Sans MS">Evolife</span>), it will read Evolife.evo.
+<br>
+Configuration files (<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">.evo</span> files) are text files containing parameter&#45;value pairs (one pair per line, separated by tab). 
+<P>
+<IMG SRC="Images/PuceRouge.jpg" ALIGN="LEFT"  style="padding&#45;right: 15px">
+You may modify any Python source under <span style="font&#45;family:Comic Sans MS">Evolife</span>&rsquo;s directory, but you will most probably start by modifying the scenarios (see below).
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If you experience difficulties with <b>tabs</b> in your Python editor, you may execute <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">./Detabify.py</span> (located in <span style="font&#45;family:Comic Sans MS">Evolife</span>&rsquo;s directory) to replace all tabs by four spaces in all Python source files.
+<P>
+<IMG SRC="Images/PuceRouge.jpg" ALIGN="LEFT"  style="padding&#45;right: 15px">
+Predefined scenarios are located in the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Scenarii</span> directory. You may choose to add your own scenario in this directory. Alternatively, you may rename and modify <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">S_Void.py</span>. When writing your scenario, you can redefine any of the functions found in <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Default_Scenario.py</span>. To do so, you may cut and paste functions from various scenarios in the Scenarii directory into your scenario.
+<P>
+<IMG SRC="Images/PuceRouge.jpg" ALIGN="LEFT"  style="padding&#45;right: 15px">
+As it stands, <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Main.py</span> gives control to the <span style="font&#45;family:Comic Sans MS">Evolife</span> main window and the simulation is run from there. However, the simulation is kept separate from the window system. For specific applications or tests, you may prefer to run the simulation without any graphic visualization. To do so, set the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">BatchMode</span> parameter in the Configuration Editor (<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Starter</span>). In that case, no display takes place and results are stored in unique files in the directory <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">___Results</span>.
+<P>
+
+<IMG SRC="Images/PuceRouge.jpg" ALIGN="LEFT"  style="padding&#45;right: 15px">
+Output results of <span style="font&#45;family:Comic Sans MS">Evolife</span> are stored in the following files, placed by default in the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">___Results</span> directory:
+<ul ><li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><</span>scen<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">></span>.csv</span> or <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><</span>scen<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">></span>_081016235225.csv</span> (where <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><</span>Scen<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">></span></span> is the name of the scenario): contains the results of a single experiment. The longer name appears in batch mode only, indicating that the simulation was launched on October 16<sup>th</sup>, 2008, at 11h52 pm. This file contains the coordinates of the various curves that would have been displayed by <span style="font&#45;family:Comic Sans MS">Evolife</span> if not in batch mode. This file can be executed using Microsoft&#45;Excel or equivalent.</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><</span>scen<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">></span>.res</span> or <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><</span>scen<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">></span>_081016235225.res</span> (where <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><</span>Scen<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">></span></span> is the name of the scenario): contains the average results of a single experiment. Such files may be concatenated to average over several experiments.</li>
+<li>Images generated when you click on the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[Photo]</span> button or when in Film mode (shortcut <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">v</span>) are stored in the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">___Results</span> directory as well.</li></ul>
+When <i>not</i> in batch mode, running several instances of <span style="font&#45;family:Comic Sans MS">Evolife</span> simultaneously will cause these output files to be overwritten by the last terminating instance.
+<P>
+You may visualize a stored curve file (<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><scen>.csv</span> or <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><scen>_081016235225.csv</span>) using the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Plot.py</span> program (on the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Evolife</span> directory).
+<br>
+Type <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Plot.py</span> from the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Evolife</span> directory to redisplay the last experiment.
+<P>
+The file <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Evolife_.evo</span> (on the Evolife directory) contains the values of parameters <i>actually used</i> in the simulation (note the trailing underscore).
+<P>
+<IMG SRC="Images/PuceRouge.jpg" ALIGN="LEFT"  style="padding&#45;right: 15px">
+Buttons
+<ul ><li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[Genome]</span>: Displays the genomes of the population<ul><li> Each horizontal line represents the genome of one individual<li> Vertical patterns result from correlations between individuals</ul> </li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[Photo]</span>: Enters Photo Mode:<ul><li> Prints a few data on the console.<li> Saves the current plots in <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Evolife.csv</span> (which may be opened with Excel). This file is also created when exiting <span style="font&#45;family:Comic Sans MS">Evolife</span>.<li> Saves a screenshot for each opened window. Screenshots are saved automatically depending on Display Period, in <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">.png</span> files. <li> If you enter Film mode (by pressing key <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">v</span>), photos are taken automatically at each display period. These files can be assembled into films using <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">ffmpeg</span> (download <a href="http://ffmpeg.org/"><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">ffmpeg</span></a>, unzip the program, go to the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">___Results</span> folder and execute:<br><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">ffmpeg &#45;framerate 5 &#45;i ___Field_%06d.png &#45;c:v libx264 &#45;pix_fmt yuv420p &#45;r 30 "Movie.mov"</span><br>or<br><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">ffmpeg &#45;framerate 10 &#45;i ___Field_%06d.png &#45;pix_fmt yuv420p &#45;loop 0 "Movie.gif"</span>). <br>(you may also use the <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">MakeFilm</span> command in <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">Tools</span>) </ul></li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[Run]</span>: Runs the simulation in continuous mode</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[Step]</span>: Runs the simulation stepwise</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[T]</span>: Displays trajectories (when applicable)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[A]</span>: Displays alliances (social links between individuals, sorted by competence) (when applicable)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[F]</span>: Displays agents&rsquo; positions on a 2&#45;D field</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[L]</span>: Log messages (not implemented)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[Help]</span>: Displays this help file</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">[Legend]</span>: Displays legend for curves</li></ul>
+<IMG SRC="Images/PuceRouge.jpg" ALIGN="LEFT"  style="padding&#45;right: 15px">
+Shortcuts
+<ul ><li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><</span>Esc<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">></span></span>: quits the active window (and the application if main window is active) (like <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">q</span>)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><</span>F1<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">></span></span>: displays this help file</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><</span>space<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">></span></span>: runs the simulation one step forward (like <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">s</span>)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">a</span>:displays alliances (social links between individuals, sorted by competence) (when applicable)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">c</span>: runs the simulation in continuous mode (like <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">r</span>)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">d</span>: displays legend for curves</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">f</span>: displays a 2&#45;D field on which agents may be located</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">g</span>: displays genomes</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">h</span>: displays this help file</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">l</span>: displays log messages (not implemented)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">m</span>: alternatively brings main window or satellite windows to foreground</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">q</span>: quits the active window (and the application if main window is active) (like <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><</span>Esc<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">></span>)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">r</span>: runs the simulation in continuous mode (like <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">c</span>)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">s</span>: runs the simulation one step forward (like <span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50"><</span>space<span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">></span></span>)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">t</span>: displays trajectories (when applicable)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">v</span>: enters film mode. One picture per opened window is recorded (see above)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">z</span>: shrinks satellite windows (genomes, alliances, labyrinth...) (dezoom)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">&#45;</span>: shrinks satellite windows (genomes, alliances, labyrinth...) (dezoom)</li>
+<li><span style="font&#45;family:&#39;Fira Mono Medium&#39;,Courier;font&#45;size&#45;adjust: 0.50">+</span>: expands satellite windows (genomes, alliances, labyrinth...) (zoom)</li></ul>
+(These shortcuts are available from any window of the application.)
+<P>
+<HR WIDTH="100%" ALIGN="LEFT">
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;</div></BODY></HTML>
